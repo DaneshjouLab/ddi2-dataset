@@ -88,7 +88,6 @@
   <div id="intro" class="container" role="introduction" tabindex="0">
     <h2>Introduction</h2>
     <p>Access to dermatological care remains a significant concern for patients across the world, and artificial intelligence (AI) tools have shown promise in assisting with triage, non-specialist diagnosis, and augmentation of specialist workflow, with several models approved or on the way to approval in the United States and European Union. Concern exists regarding the representation of patients with darker skin tones within publicly-available datasets, and studies have suggested that some computer vision-based diagnostic AI models may perform worse on photos of skin of color. </p><br>
-    <p><img class="center" loading="lazy" width="500" src="media/JAMA_derm_diverse.png">
     <br>
     <p><h2 id="motivation">Motivation</h2>
     <p>Our group previously released the Diverse Dermatology Images (DDI) dataset, a real-world retrospective collection of Fitzpatrick skin type (FST) I-VI images, and demonstrated that disparities in performance on darker skin tones were reduced following fine-tuning on DDI images. However, the DDI dataset did not include photos from Asian patients. A 2021 review of 70 studies on AI in dermatology found a gap in the availability of public datasets representing Asian skin: of the eleven studies trained on datasets that included Asian patients, most were private data collections with no FST breakdown (7/11, 64%). The remaining four studies, which also did not include FST, had limited availability, did not provide a more detailed breakdown of ethnicity beyond “Asian”, and were mostly from South Korea. Heterogeneity in health outcomes within the Asian demographic has been recognized, especially within the Asian American community. Thus, we present the DDI-2 dataset, the first publicly available, histopathologically-confirmed, real-world dataset of photos from self-identified Asian patients residing in the U.S., along with a detailed breakdown of FST and sub-ethnicity whenever available.
@@ -98,14 +97,8 @@
  </p>
     <br>
     <p><h2 id="dataset">Dataset</h2>
-    <p> <b>Labeling:</b> The DDI was retrospectively selected from reviewing pathology reports in Stanford Clinics from 2010-2020 with further details in our paper. There are 656 images representing 570 unique patients.  Each image label was expertly curated: skin tone was labeled based on in-person evaluation at the clinic visit cross-referenced against demographic photos and review of the clinical images by two board certified dermatologists. Each diagnosis was based on pathology reports from biopsy: these reports and the corresponding image was reviewed by a board certified dermatologist and dermatopathologist.  </p><br>
-    <p><b>Skin tone comparison:</b> The dataset comprised a retrospective convenience sample across all images of Fitzpatrick I-VI but was also designed to allow direct comparison between Fitzpatrick I-II and Fitzpatrick V-VI by matching diagnostic category, age within 10 years, gender, and date of photograph within 3 years. The images are not meant to be text book examples but rather represent the kind of clinical photos that AI algorithms may encounter in practice.  This design allows us to evaluate previously developed state-of-the-art diagnostic algorithms across. During the de-identification process prior to data release, some of the images were cropped further to protect patient privacy.  However, the main lesions were preserved during this process.</p><br>
-    <p><img class="center" loading="lazy" width="500" src="media/Figure_1_modified.png">
-  
-    <p>Further description of the dataset is available in our <a href="https://arxiv.org/abs/2111.08006">NeurIPS Machine Learning 4 Health workshop extended abstract</a>.</p>
-    <br>
-    <h2 id="code">Code</h2>
-    <p>Our code is available <a href="https://drive.google.com/drive/folders/1oQ53WH_Tp6rcLZjRp_-UBOQcMl-b1kkP?usp=sharing">here</a>.</p>
+    <p> DDI-2 comprises a retrospective convenience sample of 665 photos (mostly lesions [74.7%] rather than rashes [23.3%]) corresponding to 169 unique diagnoses from 550 patients who were seen at an academic medical center dermatology department from 2012-2022, and contains granular annotation of Fitzpatrick skin type, anatomical site, histopathologically-confirmed diagnoses, and annotation of artifacts associated with routine clinical workflows such as the presence of surgical markings or ruler. Each field was manually confirmed by a senior dermatology fellow with four years of dermatology training and a board-certified dermatologist with seven years of experience following board certification. Further details can be found in our paper. </p><br>  
+    <p>Further description of the dataset is available in our <a href="https://docs.google.com/document/d/1R0tjRpfl9r3q8XLdHndIqId9JiPbwe1EI9c1H_WXxqg/edit?usp=sharing">datasheet</a>.</p>
     <br>
     <h2 id="access">Accessing Dataset</h2>
     <br>
@@ -135,7 +128,8 @@
     <br>
     <br>
       <h2 id="paper">Paper</h2>
-      <p><a href="https://doi.org/10.1038/s41586-020-2145-8">***preprint here***</a><br><b>Roxana Daneshjou</b>, <b>Kailas Vodrahalli</b>, Weixin Liang, Roberto A Novoa, Melissa Jenkins, Veronica Rotemberg, Justin Ko, Susan M Swetter, Elizabeth E Bailey, Olivier Gevaert, Pritam Mukherjee, Michelle Phung, Kiana Yekrang, Bradley Fong, Rachna Sahasrabudhe, <b>James Zou</b>, <b>Albert Chiou</b>. <b>arXiv</b> (2022) </p>
+      <p><a href="https://doi.org/10.1038/s41586-020-2145-8">***preprint here***</a><br><b>Crystal T Chang</b>, Pirunthan Pathmarajah, Johan Allerup, Sheharbano Jafry, Kiana Yekrang, Dom Mitchell, Niki Ai See, Lila A Perrone, Bradley Fong, Sanjana Rajasekaran, Miah D Cisneros, Roxana Daneshjou, <b>Justin Ko</b>, <b>Albert S Chiou</b>. <b>arXiv</b> (2024) </p>
+      <p><a href="https://docs.google.com/document/d/1R0tjRpfl9r3q8XLdHndIqId9JiPbwe1EI9c1H_WXxqg/edit?usp=sharing">***download the datasheet here***</a></p>
       <p>For inquiries, contact us at <a href="mailto:%20roxanad@stanford.edu">roxanad@stanford.edu</a>.</p>
 
   </div>
